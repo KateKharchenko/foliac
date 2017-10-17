@@ -3,42 +3,63 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="cover-wrap">
+	<div id="home" class="cover-wrap">
 		<div class="wrap">	
 			<header class="header">
 				<div class="header-logo"></div>
 				<nav class="header-nav">
 					<ul>
-						<li><a href="#">Accueil</a></li>
-						<li><a href="#">Portfolio</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="#home" class="transition anchor">Accueil</a></li>
+						<li><a href="#portfolio" class="transition anchor">Portfolio</a></li>
+						<li><a href="#about" class="transition anchor">About</a></li>
+						<li><a href="#contact" class="transition anchor">Contact</a></li>
 					</ul>
 				</nav>
+				<label class="header-toggler">
+					<input type="checkbox">
+					<span></span>
+				</label>
 			</header>
+			<div class="slider">
 			<section class="cover">
-				<h1>voici votre prochain portfolio </h1>
+				<h1>voici votre prochain portfolio 1</h1>
 				<h2>un template psd simple et gratuit</h2>
-				<a href="#" class="btn btn--green">mes travaux</a>
+				<a href="#" class="btn btn--green transition">mes travaux</a>
 			</section>
+			<section class="cover">
+				<h1>voici votre prochain portfolio 2</h1>
+				<h2>un template psd simple et gratuit</h2>
+				<a href="#" class="btn btn--green transition">mes travaux</a>
+			</section>
+			<section class="cover">
+				<h1>voici votre prochain portfolio 3</h1>
+				<h2>un template psd simple et gratuit</h2>
+				<a href="#" class="btn btn--green transition">mes travaux</a>
+			</section>
+			</div>
 		</div>
 	</div>
-	<section class="gallery">
+	<section id="portfolio" class="gallery">
 		<div class="wrap">
 			<ul class="tags">
-				<li><a href="#" class="active">Tous les projets</a></li>
-				<li><a href="#">Webdesign</a></li>
-				<li><a href="#">UI/UX design</a></li>
-				<li><a href="#">Illustration</a></li>
-				<li><a href="#">Motion design</a></li>
+				<li><a href="#" class="active transition" data-target="tous">Tous les projets</a></li>
+				<li><a href="#" class="transition" data-target="webdesign">Webdesign</a></li>
+				<li><a href="#" class="transition" data-target="design">UI/UX design</a></li>
+				<li><a href="#" class="transition" data-target="illustration">Illustration</a></li>
+				<li><a href="#" class="transition" data-target="motion">Motion design</a></li>
 			</ul>
 			<div class="images">
-				<div class="images-column images-column--sm">
-					<a href="#" class="image image--h-sm">
+				<div class="images-sizer"></div>
+				<div class="images-gutter"></div>
+				<div class="images-column images-column--sm tous">
+					<a href="img/multiple items.jpg" class="image transition image--h-sm">
 						<img src="img/multiple items.jpg" alt="">
 						<div class="overlay">
 							<div class="overlay__title">
@@ -47,7 +68,20 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="image image--h-lg">
+				</div>
+				<div class="images-column images-column--lg webdesign">
+					<a href="img/identité visuelle.jpg"  class="image transition image--h-lg">
+						<img src="img/identité visuelle.jpg" alt="">
+						<div class="overlay">
+							<div class="overlay__title">
+								Forest app log title
+								<div class="overlay__subtitle">application mobile application mobileapplication mobile application mobileapplication mobile application mobile</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="images-column images-column--sm tous webdesign">
+					<a href="img/app.jpg" class="image transition image--h-lg">
 						<img src="img/app.jpg" alt="">
 						<div class="overlay">
 							<div class="overlay__title">
@@ -57,8 +91,30 @@
 						</div>
 					</a>
 				</div>
-				<div class="images-column images-column--lg">
-					<a href="#"  class="image image--h-lg">
+				<div class="images-column images-column--lg motion">
+					<a href="img/prototype.jpg" class="image transition image--h-sm">
+						<img src="img/prototype.jpg" alt="">
+						<div class="overlay">
+							<div class="overlay__title">
+								Forest app
+								<div class="overlay__subtitle">application mobile</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="images-column images-column--sm webdesign motion">
+					<a href="img/multiple items.jpg" class="image transition image--h-sm">
+						<img src="img/multiple items.jpg" alt="">
+						<div class="overlay">
+							<div class="overlay__title">
+								Forest app log title
+								<div class="overlay__subtitle">application mobile application mobile</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="images-column images-column--lg illustration webdesign">
+					<a href="img/identité visuelle.jpg"  class="image transition image--h-lg">
 						<img src="img/identité visuelle.jpg" alt="">
 						<div class="overlay">
 							<div class="overlay__title">
@@ -67,7 +123,20 @@
 							</div>
 						</div>
 					</a>
-					<a href="#" class="image image--h-sm">
+				</div>
+				<div class="images-column images-column--sm design webdesign">
+					<a href="img/app.jpg" class="image transition image--h-lg">
+						<img src="img/app.jpg" alt="">
+						<div class="overlay">
+							<div class="overlay__title">
+								Forest app log title Forest app log title Forest app log title
+								<div class="overlay__subtitle">application mobile</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="images-column images-column--lg webdesign illustration design">
+					<a href="img/prototype.jpg" class="image transition image--h-sm">
 						<img src="img/prototype.jpg" alt="">
 						<div class="overlay">
 							<div class="overlay__title">
@@ -80,17 +149,17 @@
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section id="about" class="about">
 		<div class="wrap">
 			<article class="article">
 				<h1 class="article__title">Michel Dupont</h1>
 				<div class="article__subtitle">Webdesigner, illustrateur, auteur</div>
 				<div class="article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-				<a href="" class="btn btn--gray">me contacter</a>
+				<a href="" class="btn transition btn--gray">me contacter</a>
 			</article>
 		</div>
 	</section>
-	<section class="contact">
+	<section id="contact" class="contact">
 		<div class="wrap wrap--sm">
 			<h1 class="contact__title">me contacter</h1>
 			<form action="" method="POST" class="contact__form">
@@ -101,21 +170,24 @@
 				<div class="contact__row">
 					<textarea  class="contact__field contact__field--message contact__field--fullwidth" name="" placeholder="Votre mesaage"></textarea>
 				</div>
-				<button class="contact__btn btn btn--green-inverce btn--fullwidth">envoyer</button>
+				<button class="contact__btn btn btn--green-inverce btn--fullwidth transition">envoyer</button>
 			</form>
 		</div>
 	</section>
 	<footer class="footer">
 		<div class="wrap">
-			<div class="footer__copyright">Copyright © 2015 by <a href="">beneggen - www.beneggen.fr</a></div>
+			<div class="footer__copyright">Copyright © 2015 by <a href="" class="transition">beneggen - www.beneggen.fr</a></div>
 			<ul class="footer__links">
-				<li><a target="_blank" class="footer__link footer__link--tw" href=""></a></li>
-				<li><a target="_blank" class="footer__link footer__link--in" href=""></a></li>
-				<li><a target="_blank" class="footer__link footer__link--pl" href=""></a></li>
-				<li><a target="_blank" class="footer__link footer__link--be" href=""></a></li>
+				<li><a target="_blank" class="footer__link footer__link--tw transition" href=""></a></li>
+				<li><a target="_blank" class="footer__link footer__link--in transition" href=""></a></li>
+				<li><a target="_blank" class="footer__link footer__link--pl transition" href=""></a></li>
+				<li><a target="_blank" class="footer__link footer__link--be transition" href=""></a></li>
 			</ul>
 		</div>
 	</footer>
-	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
